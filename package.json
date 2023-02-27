@@ -1,4 +1,6 @@
 {
+  "author":"Joel Florentin - J0T4KU",
+  "description":"Basic Node and Express in freeCodeCamp",
   "name": "fcc-learn-node-with-express",
   "version": "0.1.0",
   "dependencies": {
