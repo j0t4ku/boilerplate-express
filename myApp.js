@@ -2,6 +2,17 @@ let express = require('express');
 require('dotenv').config()
 let app = express();
 
+//seventh challenge
+app.get("/now",nowMiddleware,getNow);
+
+function nowMiddleware(req,res,next){
+    req.time= new Date().toString()
+    next()
+}
+function getNow(req,res){
+    res.send({time: req.time})
+}
+
 // Sixth challenge
 app.use(rootMiddleware);
 function rootMiddleware(req, res, next){
