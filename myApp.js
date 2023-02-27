@@ -18,6 +18,13 @@ function getIndex(req,res){
 publicPath = __dirname + '/public';
 app.use("/public",express.static(publicPath));
 
+//forth challenge
+app.get("/json",getJson);
+
+function getJson(req,res){
+    res.json({"message": "Hello json"});
+}
+
 
 
 
