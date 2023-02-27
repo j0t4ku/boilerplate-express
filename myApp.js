@@ -2,6 +2,13 @@ let express = require('express');
 require('dotenv').config()
 let app = express();
 
+//eighth challenge 
+app.get("/:word/echo", getEcho)
+function getEcho(req,res){
+    res.send({echo:req.params.word})
+}
+
+
 //seventh challenge
 app.get("/now",nowMiddleware,getNow);
 
