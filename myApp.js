@@ -2,10 +2,16 @@ let express = require('express');
 require('dotenv').config()
 let app = express();
 
-
-app.get("/", getIndex) 
+// Sixth challenge
+app.use(rootMiddleware);
+function rootMiddleware(req, res, next){
+    console.log(req.method+" "+req.path+" - "+req.ip);
+    next();
+}
 
 //first challenge
+app.get("/", getIndex) 
+
 function getHandler(req, res){
     res.send("Hello Express");
 }
@@ -29,6 +35,7 @@ function getJson(req,res){
         res.json({"message": "Hello json"});
     }
 }
+
 
 
 
