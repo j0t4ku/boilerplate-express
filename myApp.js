@@ -1,13 +1,20 @@
 let express = require('express');
-require('dotenv').config()
 let app = express();
+require('dotenv').config();
+let bodyParser= require('body-parser');
+
+//tenth challenge
+app.use(bodyParser.urlencoded({extended:false}))
+
+
+
 
 //Nineth challenge completed
-app.route("/name").get(getName).post(getName);
+/* app.route("/name").get(getName).post(getName);
 
 function getName(req,res){
     res.send({name:req.query.first+" "+req.query.last})
-}
+} */
 
 
 //eighth challenge 
