@@ -3,10 +3,16 @@ let app = express();
 require('dotenv').config();
 let bodyParser= require('body-parser');
 
+
 //tenth challenge
 app.use(bodyParser.urlencoded({extended:false}))
 
 
+//eleventh challenge
+app.post("/name",postName);
+function postName(req,res){
+    res.send({name:req.body.first+" "+req.body.last})
+}
 
 
 //Nineth challenge completed
